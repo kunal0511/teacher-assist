@@ -31,4 +31,4 @@ def unblock():
                 file.write(line)  
             file.truncate()
 
-block()
+
