@@ -5,14 +5,15 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import  *
 import sys
 import datetime
-from block_websites import *
+from block_new import *
 
-block()
+
 
 def startMeeting():
     global startTime
     startTime = datetime.now().replace(microsecond = 0)
     print("Start Time is : ",startTime)
+    block()
     openBrowser()
     
 def endMeeting():
@@ -20,6 +21,7 @@ def endMeeting():
     endTime = datetime.now().replace(microsecond = 0)
     print("End Time is : ",endTime)
     attendance()
+    unblock()
     leave()
     
 
